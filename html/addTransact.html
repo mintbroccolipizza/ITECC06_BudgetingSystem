@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ITECC06</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+    <div class="navbar">
+        <a href="index.html">Home</a>
+        <div class="dropdown">
+            <a class="dropbtn">Transaction</a><br><br><br>
+            <div class="dropdown-content">
+                <a href="addTransact.html">Add Transaction</a>
+                <a href="viewTransact.html">View Transaction</a>
+            </div>
+        </div>
+        <a href="login.html">Sign out</a>
+    </div>
+
+    <div class="container">
+
+        <div class>
+            <h1>Manage Your Finances</h1><br>
+            <form action="#" method="post">
+                <h2>Enter Your Allowance</h2>
+                <div class="align">
+                    <label for="monthlyAllowance">Monthly Allowance: </label>
+                    <input type="number" id="monthlyAllowance" name="monthlyAllowance">
+                </div>
+                <br><br>
+
+                <h2>Enter Your Expenses</h2>
+                <div class="align">
+                    <label for="expenseType">Expense Type: </label>
+                    <select id="expenseType" name="expenseType">
+                        <option value="food">Food</option>
+                        <option value="transpo">Transportation</option>
+                        <option value="misc">Miscellaneous</option>
+                    </select>
+                </div>
+                <br>
+                <div class="align">
+                    <label for="expenseAmount">Amount: </label>
+                    <input type="number" id="expenseAmount" name="expenseAmount">
+                </div>
+                <br>
+                <input type="submit" value="Submit">
+            </form>
+
+        </div>
+
+        <script>
+
+        </script>
+
+</body>
+
+</html>
