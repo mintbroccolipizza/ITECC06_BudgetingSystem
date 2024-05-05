@@ -27,7 +27,13 @@ body {
 
 .navbar a:hover {
   border-radius: 25px;
+  color: white;
   background-color: #ee964b;
+}
+
+.navbar .sign-out:hover {
+  border-radius: 25px;
+  background-color: #09488c;
 }
 
 .container {
