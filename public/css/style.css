@@ -103,14 +103,14 @@ form input[type="submit"] {
 }
 
 form input[type="submit"]:hover {
-  background-color: #555;
+  background-color: #ee964b;
 }
 
 form select {
   text-align: center;
   width: calc(100% - 150px);
   padding: 12px;
-  background-color: #f9f9f9;
+  background-color: transparent;
   border-radius: 15px;
   transition: border-color 0.3s ease-in-out;
   appearance: none;

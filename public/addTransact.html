@@ -27,28 +27,28 @@
                 <div class="align">
                     <label for="budgetType">Budget Type: </label>
                     <select id="budgetType" name="budgetType">
-                        <option value="food">Food</option>
-                        <option value="transpo">Transportation</option>
-                        <option value="misc">Miscellaneous</option>
+                        <option value="foodBudget">Food</option>
+                        <option value="transpoBudget">Transportation</option>
+                        <option value="miscBudget">Miscellaneous</option>
                     </select>
                 </div>
                 <div class="align">
-                    <label for="expenseAmount">Amount: </label>
-                    <input type="number" id="expenseAmount" name="expenseAmount">
+                    <label for="budgetAmount">Amount: </label>
+                    <input type="number" id="budgetAmount" name="budgetAmount">
                 </div>
                 <input type="submit" value="Submit">
             </form>
         </div>
 
         <div class="expenses-container">
-            <form action="#" method="post">
+            <form action="#" method="get">
                 <h2><i class="fa-solid fa-coins"></i> Expenses</h2>
                 <div class="align">
                     <label for="expenseType">Expense Type: </label>
                     <select id="expenseType" name="expenseType">
-                        <option value="food">Food</option>
-                        <option value="transpo">Transportation</option>
-                        <option value="misc">Miscellaneous</option>
+                        <option value="foodExpense">Food</option>
+                        <option value="transpoExpense">Transportation</option>
+                        <option value="miscExpense">Miscellaneous</option>
                     </select>
                 </div>
                 <div class="align">
