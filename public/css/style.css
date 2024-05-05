@@ -6,6 +6,25 @@
 
 body {
   background-color: #F4F2EF;
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+footer {
+  padding: 20px;
+  text-align: center;
+}
+
+.logo {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.logo img {
+  width: 100px;
+  height: auto;
 }
 
 .navbar {
