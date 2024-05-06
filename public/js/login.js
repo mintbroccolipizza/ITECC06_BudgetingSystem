@@ -1,38 +1,49 @@
 const express = require("express");
-const bodyParser = require('body-parser');
-const app = express();
-const mysql = require("mysql");
-
+const router = express.Router()
+const path = require('path');
 
 
 var establishConnection = require('./database');
 var con = establishConnection();
 
-app.use(bodyParser.urlencoded({extended: false}));
 
-app.post('/login', (req, res) => {
+router.post('/', (req, res) => {
   const {username, password} = req.body;
 
-  var sqlQuery = "SELECT first_name FROM users where first_name = " + username;
+  var sqlQuery = "SELECT first_name FROM users where first_name = '" + username+ "'";
   
-  con.query(sql, function(err, result){
-    if(err){
-      throw err;
-    }else{
-      console.log(result.first_name);
+  con.query(sqlQuery, function(err, result){
+    
+    if (err) {
+      return err;
+    } else {
+      if (result.length > 0) {
+        // User exists
+
+        res.sendFile(path.join(__dirname, '../index.html'));
+        // console.log(__dirname + '../index.html');
+      } else {
+        // User does not exist
+        // res.send('User does not exist');
+        res.sendFile(path.join(__dirname, '../login.html'));
+      }
+
     }
-  })
+
+
+  });
 });
 
+module.exports = router
 
 
-const loginForm = document.getElementById("login");
+// const loginForm = document.getElementById("login");
 
-loginForm.addEventListener("submit", function(event) {
-  event.preventDefault();
+// loginForm.addEventListener("submit", function(event) {
+//   event.preventDefault();
   
-  return LogIn();
+//   return LogIn();
   
-  loginForm.reset();
-});
+//   loginForm.reset();
+// });
   

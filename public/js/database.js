@@ -5,11 +5,14 @@ module.exports = function establishConnection(){
     var con = mysql.createConnection({
         host: "localhost",
         user: "root",
-        password: ""
+        password: "",
+        database: "budgetingsystem"
     });
       
       con.connect(function(err) {
-        if (err) throw err;
+        if (err){
+          return err;
+        }
         console.log("Connected!");
     });
 
