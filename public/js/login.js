@@ -25,6 +25,7 @@ router.post('/', (req, res) => {
       } else {
         // User does not exist
         // res.send('User does not exist');
+        res.send('<script>alert("incorrect credentials");</script>');
         res.sendFile(path.join(__dirname, '../login.html'));
       }
 
