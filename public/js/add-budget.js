@@ -1,15 +1,15 @@
 const express = require("express");
-const router = express.Router()
-const path = require('path');
+const router = express.Router();
 
-const {username, password} = require('./login');
+
 
 
 router.get('/', (req, res) => {
+    console.log(req.query);
 
-    console.log();
-    console.log(password);
-
+    
 });
+
+
 
 module.exports = router;
