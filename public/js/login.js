@@ -2,9 +2,9 @@ const express = require("express");
 const router = express.Router();
 const path = require('path');
 
-
+var user_id = 1;
 var establishConnection = require('./database');
-var con = establishConnection();
+var client = establishConnection();
 
 
 router.post('/', (req, res) => {
@@ -12,17 +12,16 @@ router.post('/', (req, res) => {
 
   var sqlQuery = "SELECT username, password FROM users where username = '" + username+ "' AND password = '" + password + "'";
   
-  con.query(sqlQuery, function(err, result){
+  client.query(sqlQuery, function(err, result){
     
     if (err) {
       return err;
     } else {
 
 
-      if ((result.length > 0) && (result[0].username == username) && (result[0].password == password)) {
+      if ((result.rows.length > 0) && (result.rows[0].username == username) && (result.rows[0].password == password)) {
         // User exists
         // console.log(req.body);
-        module.exports = req.body;
         res.sendFile(path.join(__dirname, '../index.html'));
       }else{
         res.sendFile(path.join(__dirname, '../login.html'));
@@ -39,6 +38,5 @@ router.post('/', (req, res) => {
 
 
 
-module.exports = router;
-
+module.exports = {router, user_id}
   

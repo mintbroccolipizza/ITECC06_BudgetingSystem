@@ -4,7 +4,7 @@ const bodyParser = require('body-parser');
 
 const app = express();
 app.use(bodyParser.urlencoded({ extended: false }));
-const login = require('./public/js/login');
+const {router: login} = require('./public/js/login');
 const addBudget = require('./public/js/add-budget');
 
 app.get('/', (req, res) => {
