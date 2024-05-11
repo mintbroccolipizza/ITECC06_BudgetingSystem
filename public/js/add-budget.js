@@ -13,17 +13,17 @@ router.get('/', (req, res) => {
 
     const currentDate = new Date();
 
-// Get month, day, and year
-const month = currentDate.getMonth() + 1; // January is 0, so we add 1
-const day = currentDate.getDate();
-const year = currentDate.getFullYear();
+    // Get month, day, and year
+    const month = currentDate.getMonth() + 1; // January is 0, so we add 1
+    const day = currentDate.getDate();
+    const year = currentDate.getFullYear();
 
-// Add leading zeros if needed
-const formattedMonth = month < 10 ? `0${month}` : month;
-const formattedDay = day < 10 ? `0${day}` : day;
+    // Add leading zeros if needed
+    const formattedMonth = month < 10 ? `0${month}` : month;
+    const formattedDay = day < 10 ? `0${day}` : day;
 
-// Construct the formatted date string (mm-dd-yyyy)
-const formattedDate = `${year}-${formattedMonth}-${formattedDay}`;
+    // Construct the formatted date string (mm-dd-yyyy)
+    const formattedDate = `${year}-${formattedMonth}-${formattedDay}`;
 
 
     var con = establishConnection();
