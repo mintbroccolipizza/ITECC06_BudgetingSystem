@@ -2,7 +2,7 @@ const express = require("express");
 const router = express.Router();
 const path = require('path');
 
-var user_id = 0;
+var user_id = 1;
 var establishConnection = require('./database');
 var client = establishConnection();
 
@@ -21,6 +21,7 @@ router.post('/', (req, res) => {
       if ((result.rows.length > 0) && (result.rows[0].username == username) && (result.rows[0].password == password)) {
         // User exists
         user_id = result.rows[0].user_id;
+
         res.sendFile(path.join(__dirname, '../index.html'));
       }else{
         res.sendFile(path.join(__dirname, '../login.html'));
