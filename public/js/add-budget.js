@@ -1,11 +1,8 @@
 const express = require("express");
 const router = express.Router();
-const app = express();
 const path = require('path');
 
 const myobject = require('./login');
-const user_id = myobject.user_id;
-
 
 var establishConnection = require('./database');
 var con = establishConnection();
