@@ -3,8 +3,8 @@ const router = express.Router();
 const app = express();
 const path = require('path');
 
-const {user_id} = require('./login');
-
+const myobject = require('./login');
+const user_id = myobject.user_id;
 
 
 var establishConnection = require('./database');
@@ -33,7 +33,7 @@ router.get('/budget', (req, res) => {
 
     const {budgetType, budgetAmount} = req.query;
 
-    const sqlQuery = `INSERT INTO budget (user_id, type, amount, date) VALUES (${user_id},'${budgetType}','${budgetAmount}','${formattedDate}')`;
+    const sqlQuery = `INSERT INTO budget (user_id, type, amount, date) VALUES (${myobject.user_id},'${budgetType}','${budgetAmount}','${formattedDate}')`;
 
     // console.log(sqlQuery);
     
@@ -48,6 +48,7 @@ router.get('/budget', (req, res) => {
         res.sendFile(path.join(__dirname, '../addTransact.html'));
         // console.log(path.join(__dirname, '../index.html'));
     });
+    // console.log(myobject.user_id);
     
 
 });
@@ -56,7 +57,7 @@ router.get('/expense', (req, res) => {
 
     const {expenseType, expenseAmount} = req.query;
 
-    const sqlQuery = `INSERT INTO expenses (user_id, type, amount, date) VALUES (${user_id},'${expenseType}','${expenseAmount}','${formattedDate}')`;
+    const sqlQuery = `INSERT INTO expenses (user_id, type, amount, date) VALUES (${myobject.user_id},'${expenseType}','${expenseAmount}','${formattedDate}')`;
 
     // console.log(sqlQuery);
     
