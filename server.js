@@ -19,7 +19,7 @@ app.use(express.static("public"));
 
 app.use('/login', login);
 app.use('/addTransaction', addBudget);
-app.use(view);
+
 
 
 
