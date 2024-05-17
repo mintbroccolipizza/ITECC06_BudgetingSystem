@@ -4,10 +4,6 @@ const path = require('path');
 
 const myobject = require('./login');
 
-var establishConnection = require('./database');
-var con = establishConnection();
-
-
 
 const currentDate = new Date();
 
@@ -34,7 +30,7 @@ router.get('/budget', (req, res) => {
 
     // console.log(sqlQuery);
     
-    con.query(sqlQuery, (err, result) => {
+    myobject.client.query(sqlQuery, (err, result) => {
         if (err) {
             console.error('Error executing MySQL query: ', err);
             res.status(500).send('Internal Server Error');
@@ -58,7 +54,7 @@ router.get('/expense', (req, res) => {
 
     // console.log(sqlQuery);
     
-    con.query(sqlQuery, (err, result) => {
+    myobject.client.query(sqlQuery, (err, result) => {
         if (err) {
             console.error('Error executing MySQL query: ', err);
             res.status(500).send('Internal Server Error');

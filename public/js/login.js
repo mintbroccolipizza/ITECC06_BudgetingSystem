@@ -2,13 +2,14 @@ const express = require("express");
 const router = express.Router();
 const path = require('path');
 
-  let myobject = {
-    router: router, 
-    user_id: 1
-  };
 var establishConnection = require('./database');
-// const { resourceUsage } = require("process");
 var client = establishConnection();
+
+let myobject = {
+  router: router, 
+  user_id: 1,
+  client
+};
 
 // const myStuff = { router, user_id: 1 }
 
@@ -26,8 +27,8 @@ router.post('/', (req, res) => {
 
       if ((result.rows.length > 0) && (result.rows[0].username == username) && (result.rows[0].password == password)) {
         // User exists
-        myobject.user_id = result.rows[0].user_id
-
+        myobject.user_id = result.rows[0].user_id;
+        console.log(myobject.user_id);
         res.sendFile(path.join(__dirname, '../index.html'));
         
       }else{

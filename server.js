@@ -8,7 +8,8 @@ app.use(bodyParser.urlencoded({ extended: false }));
 
 const {router: login} = require('./public/js/login');
 const {router: addBudget} = require('./public/js/add-budget');
-const view = require('./public/js/viewTransaction');
+const viewBudget = require('./public/js/view-budget-transaction');
+const viewExpense = require('./public/js/view-expense-transaction');
 
 app.get('/', (req, res) => {
   res.sendFile(__dirname + '/public/login.html');
@@ -18,9 +19,9 @@ app.use(express.static("public"));
 
 
 app.use('/login', login);
+app.use('/get-information-budget', viewBudget);
+app.use('/get-information-expense', viewExpense);
 app.use('/addTransaction', addBudget);
-
-
 
 
 
