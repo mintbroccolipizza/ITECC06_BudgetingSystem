@@ -18,24 +18,3 @@ module.exports = function establishConnection() {
 
 
 
-
-// module.exports = function establishConnection(){
-//   var con = pg.Client
-//   var con = mysql.createConnection({
-//     host: "localhost",
-//     user: "root",
-//     password: "",
-//     database: "budgetingsystem",
-//     port: 5432
-//   });
-    
-//   con.connect(function(err) {
-//     if (err){
-//       return err;
-//     }
-//     console.log("Connected!");
-//   });
-//   return con;
-// };
-
-

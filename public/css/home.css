@@ -82,15 +82,6 @@ footer {
   margin: 20px auto;
 }
 
-.transaction-summary {
-  background-color: #f2f2f2;
-  border-radius: 25px;
-  padding: 20px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  width: 300px;
-  margin: 20px auto;
-}
-
 .account-info p {
   margin-bottom: 10px;
   color: #555;
@@ -109,9 +100,26 @@ footer {
   margin: 20px auto;
 }
 
+h2 {
+  font-size: 18px;
+  color: #09488c;
+}
+
 .transaction-summary {
+  background-color: #f2f2f2;
+  border-radius: 25px;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 300px;
   text-align: center;
   margin: 0 auto;
+}
+
+h3 {
+  margin: 0;
+  padding: 10px;
+  font-size: 14px;
+  font-weight: lighter;
 }
 
 .table-header {
@@ -140,36 +148,36 @@ footer {
   color: inherit;
 }
 
-#transaction-table {
+.transaction-table {
   width: 100%;
   border-collapse: collapse;
   border-radius: 10px;
   overflow: hidden;
 }
 
-#transaction-table th,
-#transaction-table td {
+.transaction-table th,
+.transaction-table td {
   padding: 12px;
   text-align: left;
   border-bottom: 1px solid #dddddd;
 }
 
-#transaction-table th {
+.transaction-table th {
   background-color: #f2f2f2;
 }
 
-#transaction-table tbody tr {
+.transaction-table tbody tr {
   transition: background-color 0.3s;
 }
 
-#transaction-table tbody tr:hover {
+.transaction-table tbody tr:hover {
   background-color: #f8f8f8;
 }
 
-#transaction-table tbody tr:nth-child(even) {
+.transaction-table tbody tr:nth-child(even) {
   background-color: #f9f9f9;
 }
 
-#transaction-table tbody tr:last-child td {
+.transaction-table tbody tr:last-child td {
   border-bottom: none;
 }

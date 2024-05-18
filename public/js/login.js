@@ -13,6 +13,24 @@ let myobject = {
 
 // const myStuff = { router, user_id: 1 }
 
+router.get('/', (req, res) => {
+
+  const sqlQuery = `SELECT first_name FROM users WHERE user_id = ${myobject.user_id}`;
+
+  myobject.client.query(sqlQuery, (err, result) => {
+
+    if(err){
+      return err;
+    }
+
+    res.json(result.rows);
+
+
+  })
+
+
+})
+
 
 router.post('/', (req, res) => {
   const {username, password} = req.body;

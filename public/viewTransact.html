@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ITECC06</title>
+  <title>Budget Bliss</title>
 
   <link rel="stylesheet" type="text/css" href="css/style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
@@ -20,28 +20,17 @@
   </div>
 
   <div class="container">
-    <div class="table">
-      <div id="list-budget"></div>
-      <br><br>
-      <div id="list-expense"></div>
-      <br><br>
-    </div>
     
+    <h2><i class="fa-solid fa-receipt"></i> Transactions</h2><br>
 
-      <h2><i class="fa-solid fa-receipt"></i> Transactions</h2><br>
-
-      <div class="transaction-container">
-        <table id="transaction-table">
-            <thead>
-                <tr>
-                    <th>Date</th>
-                    <th>Description</th>
-                    <th>Amount</th>
-                </tr>
-            </thead>
-            <tbody id="transaction-body">
-            </tbody>
-        </table>
+  
+    <div class="table">
+      <h2>Budget</h2>
+      <div id="list-budget" class="transaction-summary table-header"></div>
+      <br><br>
+      <h2>Expenses</h2>
+      <div id="list-expense" class="transaction-summary table-headerr"></div>
+      <br><br>
     </div>
 
   </div>
