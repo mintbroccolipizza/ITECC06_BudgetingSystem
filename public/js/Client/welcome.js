@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
             data.forEach(name => {
                 const h1 = document.createElement('h1');
-                h1.textContent = 'Welcome ' + name.first_name;
+                h1.textContent = 'Welcome, ' + name.first_name + '!';
 
                 listDiv.appendChild(h1);
             });

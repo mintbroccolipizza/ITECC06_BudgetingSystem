@@ -17,8 +17,10 @@ body {
 }
 
 footer {
+  margin-top: auto;
   padding: 20px;
   text-align: center;
+  color: #fff;
 }
 
 .logo {
@@ -63,7 +65,7 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  flex-grow: 1;
   flex-direction: column;
 }
 
@@ -158,78 +160,4 @@ form select:hover {
 h2 {
     font-size: 18px;
     color: #09488c;
-}
-
-.transaction-summary {
-  background-color: #f2f2f2;
-  border-radius: 25px;
-  padding: 20px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  width: 300px;
-  margin: 20px auto;
-}
-
-.transaction-summary {
-  text-align: center;
-  margin: 0 auto;
-}
-
-.table-header {
-  display: flex;
-  justify-content: space-between;
-  margin: 0 auto;
-  align-items: center;
-}
-
-.table-header h2 {
-  margin: 0;
-  padding: 10px;
-  font-size: 16px;
-  font-weight: bold;
-}
-
-.table-header h3 {
-  margin: 0;
-  padding: 10px;
-  font-size: 14px;
-  font-weight: lighter;
-}
-
-.table-header h3 a {
-  text-decoration: none;
-  color: inherit;
-}
-
-.transaction-table {
-  width: 100%;
-  border-collapse: collapse;
-  border-radius: 10px;
-  overflow: hidden;
-}
-
-.transaction-table th,
-.transaction-table td {
-  padding: 12px;
-  text-align: left;
-  border-bottom: 1px solid #dddddd;
-}
-
-.transaction-table th {
-  background-color: #f2f2f2;
-}
-
-.transaction-table tbody tr {
-  transition: background-color 0.3s;
-}
-
-.transaction-table tbody tr:hover {
-  background-color: #f8f8f8;
-}
-
-.transaction-table tbody tr:nth-child(even) {
-  background-color: #f9f9f9;
-}
-
-.transaction-table tbody tr:last-child td {
-  border-bottom: none;
 }

@@ -53,7 +53,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 table.appendChild(tbody);
                 listDiv.appendChild(table);
             }else{
-                listDiv.innerHTML = 'No transactions found for the selected month.'; // Clear previous content
+                listDiv.innerHTML = 'No transactions found.'; // Clear previous content
             }
 
         })
