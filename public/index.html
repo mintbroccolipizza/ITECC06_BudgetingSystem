@@ -12,50 +12,54 @@
 
 <body>
 
-  <div class="navbar">
-    <a href="index.html"><i class="fa-solid fa-house"></i></a>
-    <a href="addTransact.html"><i class="fa-solid fa-piggy-bank"></i></i></a>
-    <a href="viewTransact.html"><i class="fa-solid fa-receipt"></i></a>
-    <a href="login.html" class="sign-out">Sign out</a>
+  <div class="combine">
+    <div class="navbar">
+      <a href="index.html"><i class="fa-solid fa-house"></i></a>
+      <a href="addTransact.html"><i class="fa-solid fa-piggy-bank"></i></i></a>
+      <a href="viewTransact.html"><i class="fa-solid fa-receipt"></i></a>
+      <a href="login.html" class="sign-out">Sign out</a>
+    </div>
+
+    <div id="welcome-user"></div>
+
+
+    <div class="container">
+
+      <div class="account-info">
+        <p>Date: <span id="currentDate"></span></p>
+        <p>Time: <span id="currentTime"></span></p>
+      </div>
+
+      
+      <div class="separator"></div>
+
+      <div class="table-header">
+        <h2>Recent Transactions</h2>
+        <h3><a href="viewTransact.html">View All</a></h3>
+      </div>
+
+      <div class="table">
+        <h2>Budget</h2>
+        <div id="list-budget-index" class="transaction-summary table-header"></div>
+        <br><br>
+        <h2></i> Expenses</h2>
+        <div id="list-expense-index" class="transaction-summary table-header"></div>
+      </div>
+    
+
+    </div>
+
+    <footer>
+      <div class="logo">
+        <img src="./asset/logo2.png">
+      </div>
+    </footer>
   </div>
 
-  <div id="welcome-user"></div>
-
-
-  <div class="container">
-
-    <div class="account-info">
-      <p>Date: <span id="currentDate"></span></p>
-      <p>Time: <span id="currentTime"></span></p>
-    </div>
-
-    
-    <div class="separator"></div>
-
-    <div class="table-header">
-      <h2>Recent Transactions</h2>
-      <h3><a href="viewTransact.html">View All</a></h3>
-    </div>
-
-    <div class="table">
-      <h2>Budget</h2>
-      <div id="list-budget" class="transaction-summary table-header"></div>
-      <br><br>
-      <h2></i> Expenses</h2>
-      <div id="list-expense" class="transaction-summary table-header"></div>
-    </div>
   
 
-  </div>
-
-  <footer>
-    <div class="logo">
-      <img src="./asset/logo2.png">
-    </div>
-  </footer>
-
-  <script src="./js/Client/display-budget.js"></script>
-  <script src="./js/Client/display-expense.js"></script>
+  <script src="./js/Client/index file/index-budget.js"></script>
+  <script src="./js/Client/index file/index-expense.js"></script>
   <script src="./js/Client/display-date.js"></script>
   <script src="./js/Client/display-time.js"></script>
   <script src="./js/Client/welcome.js"></script>

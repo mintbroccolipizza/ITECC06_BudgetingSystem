@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
 
-    const listDiv = document.getElementById('list-budget');
+    const listDiv = document.getElementById('list-budget-index');
 
     fetch('/get-information-budget')
         .then(response => response.json())
@@ -25,27 +25,30 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
             if(data.length > 0){
-                let i = 1;
+                let i = 0;
                 data.forEach(transaction => {
 
-                    const tr = document.createElement('tr');
-                    // insert date
-                    const tdDate = document.createElement('td');
-                    const date = new Date(transaction.date);
-                    const formattedDate = date.toISOString().split('T')[0]; // yyyy-mm-dd format
-                    tdDate.textContent = formattedDate;
-                    tr.appendChild(tdDate);
-                    // insert type
-                    const tdtype = document.createElement('td');
-                    tdtype.textContent = transaction.type;
-                    tr.appendChild(tdtype);
-                    // insert amount
-                    const tdamount = document.createElement('td');
-                    tdamount.textContent = transaction.amount;
-                    tr.appendChild(tdamount);
-                    
-                    tbody.appendChild(tr);
+                    if(i < 3){
+                        const tr = document.createElement('tr');
+                        // insert date
+                        const tdDate = document.createElement('td');
+                        const date = new Date(transaction.date);
+                        const formattedDate = date.toISOString().split('T')[0]; // yyyy-mm-dd format
+                        tdDate.textContent = formattedDate;
+                        tr.appendChild(tdDate);
+                        // insert type
+                        const tdtype = document.createElement('td');
+                        tdtype.textContent = transaction.type;
+                        tr.appendChild(tdtype);
+                        // insert amount
+                        const tdamount = document.createElement('td');
+                        tdamount.textContent = transaction.amount;
+                        tr.appendChild(tdamount);
+                        
+                        tbody.appendChild(tr);
+                    }
 
+                    i++;
                 })
                 table.appendChild(tbody);
                 listDiv.appendChild(table);

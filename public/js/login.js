@@ -23,6 +23,7 @@ router.get('/', (req, res) => {
       return err;
     }
 
+    // console.log(result.rows);
     res.json(result.rows);
 
 
